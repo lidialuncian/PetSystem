@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.WaterBowlActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pump_card"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:backgroundTint="@color/primaryColor"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:id="@+id/title_start_stop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginTop="1dp"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/jura"
+            android:text="@string/start_stop"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/start_btn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            app:backgroundTint="@color/white"
+            android:background="@drawable/white_border_shape_button_rounded"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="@string/start"
+            android:textColor="@color/secondaryColor"
+            android:textSize="20sp"
+            />
+
+        <Button
+            android:id="@+id/stop_btn"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="70dp"
+            app:backgroundTint="@color/white"
+            android:background="@drawable/white_border_shape_button_rounded"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="@string/stop"
+            android:textColor="@color/secondaryColor"
+            android:textSize="20sp"
+            />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/disconnect_card"
+        android:layout_gravity="center"
+        android:layout_below="@+id/pump_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="10dp">
+
+        <Button
+            android:id="@+id/disconnect_water_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:backgroundTint="@color/white"
+            android:background="@drawable/white_border_shape_button_rounded"
+            android:foreground="?attr/selectableItemBackground"
+            android:text="@string/disconnect"
+            android:textColor="@color/secondaryColor"
+            android:textSize="20sp"
+            />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

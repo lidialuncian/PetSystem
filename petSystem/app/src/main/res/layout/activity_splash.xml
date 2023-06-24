@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/splashPageBackgroundColor"
+    tools:context=".activities.SplashActivity">
+
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="@dimen/splash_screen_title_width"
+        android:layout_height="@dimen/splash_screen_title_height"
+        android:layout_marginTop="@dimen/splash_screen_title_marginTop"
+        android:fontFamily="@font/jura"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/splash_screen_title_text_size"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="@dimen/splash_screen_water_width"
+        android:layout_height="@dimen/splash_screen_water_height"
+        android:layout_marginTop="@dimen/splash_screen_water_marginTop"
+        android:layout_marginEnd="@dimen/splash_screen_water_marginEnd"
+        app:layout_constraintEnd_toStartOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/tv_app_name"
+        app:srcCompat="@drawable/water_drops_foreground"
+        android:contentDescription="@string/water_icon" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="@dimen/splash_screen_food_width"
+        android:layout_height="@dimen/splash_screen_food_height"
+        android:layout_marginStart="@dimen/splash_screen_food_marginStart"
+        android:layout_marginTop="@dimen/splash_screen_food_marginTop"
+        android:layout_marginEnd="@dimen/splash_screen_food_marginEnd"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_app_name"
+        app:srcCompat="@drawable/food_bowl_foreground"
+        android:contentDescription="@string/food_icon" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="@dimen/splash_screen_health_width"
+        android:layout_height="@dimen/splash_screen_health_height"
+        android:layout_marginTop="@dimen/splash_screen_health_marginTop"
+        android:layout_marginEnd="@dimen/splash_screen_health_marginEnd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_app_name"
+        app:srcCompat="@drawable/pet_health_foreground"
+        android:contentDescription="@string/health_icon" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="@dimen/splash_screen_dog_image_width"
+        android:layout_height="@dimen/splash_screen_dog_image_height"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/dog_splash"
+        android:contentDescription="@string/splash_dog" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="@dimen/splash_screen_cat_image_width"
+        android:layout_height="@dimen/splash_screen_cat_image_height"
+        android:rotation="180"
+        android:rotationY="-180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/cat_splash"
+        android:contentDescription="@string/splash_cat" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

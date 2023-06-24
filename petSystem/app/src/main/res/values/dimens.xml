@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Splash page -->
+    <dimen name="splash_screen_title_text_size">70sp</dimen>
+    <dimen name="splash_screen_title_width">414dp</dimen>
+    <dimen name="splash_screen_title_height">136dp</dimen>
+    <dimen name="splash_screen_title_marginTop">180dp</dimen>
+
+    <dimen name="splash_screen_water_width">66dp</dimen>
+    <dimen name="splash_screen_water_height">62dp</dimen>
+    <dimen name="splash_screen_water_marginTop">16dp</dimen>
+    <dimen name="splash_screen_water_marginEnd">32dp</dimen>
+
+    <dimen name="splash_screen_food_width">123dp</dimen>
+    <dimen name="splash_screen_food_height">90dp</dimen>
+    <dimen name="splash_screen_food_marginTop">4dp</dimen>
+    <dimen name="splash_screen_food_marginStart">43dp</dimen>
+    <dimen name="splash_screen_food_marginEnd">10dp</dimen>
+
+    <dimen name="splash_screen_health_width">57dp</dimen>
+    <dimen name="splash_screen_health_height">66dp</dimen>
+    <dimen name="splash_screen_health_marginTop">12dp</dimen>
+    <dimen name="splash_screen_health_marginEnd">84dp</dimen>
+
+    <dimen name="splash_screen_dog_image_width">297dp</dimen>
+    <dimen name="splash_screen_dog_image_height">222dp</dimen>
+    <dimen name="splash_screen_cat_image_width">216dp</dimen>
+    <dimen name="splash_screen_cat_image_height">162dp</dimen>
+
+    <!-- Intro page -->
+    <dimen name="intro_screen_title_text_size">60sp</dimen>
+    <dimen name="intro_screen_title_text_marginTop">25dp</dimen>
+    <dimen name="intro_screen_image_marginTop">1dp</dimen>
+    <dimen name="lets_get_started_text_marginTop">15dp</dimen>
+    <dimen name="lets_get_started_text_size">20sp</dimen>
+    <dimen name="intro_screen_text_marginStartEnd">20dp</dimen>
+    <dimen name="intro_screen_text_line_spacing_extra">5dp</dimen>
+    <dimen name="intro_screen_text_marginTop">10dp</dimen>
+    <dimen name="intro_screen_text_size">16sp</dimen>
+    <dimen name="intro_screen_sign_in_btn_marginTop">50dp</dimen>
+    <dimen name="intro_screen_sign_up_btn_marginTop">15dp</dimen>
+    <dimen name="btn_paddingTopBottom">8dp</dimen>
+    <dimen name="btn_marginStartEnd">20dp</dimen>
+    <dimen name="btn_text_size">18sp</dimen>
+
+    <!-- Sign Up page -->
+    <dimen name="sign_up_screen_btn_marginTop">30dp</dimen>
+    <dimen name="toolbar_title_text_size">20sp</dimen>
+    <dimen name="sign_up_screen_content_marginTop">10dp</dimen>
+    <dimen name="sign_up_description_text_size">15sp</dimen>
+    <dimen name="sign_up_screen_marginStartEnd">20dp</dimen>
+    <dimen name="authentication_screen_card_view_marginTop">30dp</dimen>
+    <dimen name="card_view_elevation">10dp</dimen>
+    <dimen name="card_view_corner_radius">10dp</dimen>
+    <dimen name="card_view_layout_content_padding">16dp</dimen>
+    <dimen name="authentication_screen_til_marginStartEnd">16dp</dimen>
+    <dimen name="et_text_size">16sp</dimen>
+    <dimen name="authentication_screen_til_marginTop">20dp</dimen>
+
+    <!-- Progress bar -->
+    <dimen name="progress_dialog_content_padding">10dp</dimen>
+    <dimen name="progress_bar_size">50dp</dimen>
+    <dimen name="progress_text_marginStart">16dp</dimen>
+    <dimen name="progress_text_size">16sp</dimen>
+
+    <!-- Navigation Menu Main -->
+    <dimen name="height_of_nav_main">250dp</dimen>
+    <dimen name="nav_image_size">150dp</dimen>
+    <dimen name="nav_content_margin_StartEnd">16dp</dimen>
+    <dimen name="nav_username_content_margin_StartEnd">24dp</dimen>
+    <dimen name="nav_content_margin_top">5dp</dimen>
+    <dimen name="nav_content_margin_bottom">10dp</dimen>
+    <dimen name="nav_user_name_text_size">18sp</dimen>
+    <dimen name="nav_image_circular_border_width">5dp</dimen>
+    <dimen name="nav_divider_height">0.5dp</dimen>
+
+    <!-- My Profile -->
+    <dimen name="my_profile_screen_content_marginStartEnd">16dp</dimen>
+    <dimen name="my_profile_screen_content_marginTopBottom">10dp</dimen>
+    <dimen name="my_profile_screen_content_padding">16dp</dimen>
+    <dimen name="my_profile_user_image_size">100dp</dimen>
+    <dimen name="my_profile_name_til_marginTop">25dp</dimen>
+    <dimen name="my_profile_et_email_marginTop">20dp</dimen>
+    <dimen name="my_profile_et_mobile_marginTop">20dp</dimen>
+    <dimen name="my_profile_btn_update_marginTop">30dp</dimen>
+
+    <!-- Feeder page -->
+    <dimen name="feeder_servo_card_marginTop">100dp</dimen>
+    <dimen name="feeder_card_marginStartEnd">5dp</dimen>
+    <dimen name="feeder_servo_card_text_marginTop">1dp</dimen>
+    <dimen name="feeder_servo_card_text_marginStart">10dp</dimen>
+    <dimen name="feeder_servo_card_button_width">150dp</dimen>
+    <dimen name="feeder_servo_card_button_height">50dp</dimen>
+
+</resources>

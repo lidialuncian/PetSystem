@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">petSystem</string>
+
+    <string name="image_contentDescription">pets_food_schedule_illustration</string>
+    <string name="let_s_get_started_text">Let\'s Get started</string>
+    <string name="intro_text_description">Keep track of your little buddy\'s activity with petSystem so you\'ll never worry again.</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
+
+    <string name="sign_up_description_text">Enter your username, email and password, to register with us.</string>
+    <string name="sign_in_description_text">Enter your username and password, to access your account.</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+
+    <string name="please_click_back_again_to_exit">Please click back again to exit.</string>
+    <string name="please_wait">Please Wait&#8230;</string>
+
+    <string name="nav_my_profile">My Profile</string>
+    <string name="nav_sign_out">Sign Out</string>
+    <string name="my_profile_image">Profile image</string>
+
+    <string name="mobile">Mobile</string>
+    <string name="update">Update</string>
+    <string name="water_dispenser">Water dispenser</string>
+    <string name="water_dispenser_info"> - start/stop the pump \n - get notifications from the sensor </string>
+    <string name="food_dispenser">Food dispenser</string>
+    <string name="food_dispenser_info"> - control the amount of food, and make a schedule \n - open/close feeding door</string>
+    <string name="health_care_collar">Health-care collar</string>
+    <string name="health_care_collar_info"> - measure body temperature \n - measure heart rate</string>
+    <string name="connect">Connect</string>
+    <string name="refresh">REFRESH</string>
+    <string name="quantity_grams">Quantity (grams)</string>
+    <string name="open_close">Open/Close feeder door</string>
+    <string name="start_stop">Start/Stop water pump</string>
+    <string name="open">OPEN</string>
+    <string name="close">CLOSE</string>
+    <string name="schedule_first_meal">Schedule first meal</string>
+    <string name="schedule_second_meal">Schedule second meal</string>
+    <string name="schedule_third_meal">Schedule third meal</string>
+    <string name="send">SEND</string>
+    <string name="schedule_time">Select hour</string>
+    <string name="start">START</string>
+    <string name="stop">STOP</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="splash_cat">Splash cat</string>
+    <string name="splash_dog">Splash dog</string>
+    <string name="health_icon">Health icon</string>
+    <string name="food_icon">Food icon</string>
+    <string name="water_icon">Water icon</string>
+
+</resources>
