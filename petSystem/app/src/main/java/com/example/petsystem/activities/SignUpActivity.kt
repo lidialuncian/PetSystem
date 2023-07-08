@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import com.example.petsystem.R
-import com.example.petsystem.firebase.FirestoreClass
+import com.example.petsystem.firebase.FirestoreDatabase
 import com.example.petsystem.models.User
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
@@ -99,8 +99,7 @@ class SignUpActivity : BaseActivity() {
                         val firebaseUser: FirebaseUser = task.result!!.user!!
                         val regEmail = firebaseUser.email!!
                         val user =  User(firebaseUser.uid, username, regEmail)
-                        FirestoreClass().registerUser(this, user)
-//                        FirestoreClass().createThreeMeals(user)
+                        FirestoreDatabase().registerUser(this, user)
                     } else {
                         Toast.makeText(
                             this,

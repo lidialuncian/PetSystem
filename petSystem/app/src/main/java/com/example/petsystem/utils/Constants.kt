@@ -18,4 +18,6 @@ object Constants {
     const val SECOND_MEAL_HOUR: String = "second_meal_hour"
     const val THIRD_MEAL_QUANTITY: String = "third_meal_quantity"
     const val THIRD_MEAL_HOUR: String = "third_meal_hour"
+    const val EXTRA_ADDRESS: String = "Device_address"
+    const val EXTRA_NAME: String = "Device_name"
 }

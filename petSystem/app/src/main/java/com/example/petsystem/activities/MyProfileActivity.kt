@@ -23,7 +23,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
 import com.example.petsystem.R
-import com.example.petsystem.firebase.FirestoreClass
+import com.example.petsystem.firebase.FirestoreDatabase
 import com.example.petsystem.models.User
 import com.example.petsystem.utils.Constants
 import com.google.android.material.textfield.TextInputLayout
@@ -49,7 +49,7 @@ class MyProfileActivity : BaseActivity() {
 
         setupActionBar()
 
-        FirestoreClass().loadUserData(this@MyProfileActivity)
+        FirestoreDatabase().loadUserData(this@MyProfileActivity)
 
         findViewById<ImageView>(R.id.my_profile_user_image).setOnClickListener {
 
@@ -237,6 +237,6 @@ class MyProfileActivity : BaseActivity() {
             userHashMap[Constants.MOBILE] = findViewById<TextView>(R.id.my_profile_mobile).text.toString().toLong()
         }
 
-        FirestoreClass().updateUserProfileData(this@MyProfileActivity, userHashMap)
+        FirestoreDatabase().updateUserProfileData(this@MyProfileActivity, userHashMap)
     }
 }

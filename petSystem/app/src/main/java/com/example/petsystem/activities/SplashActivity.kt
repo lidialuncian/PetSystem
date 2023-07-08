@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.WindowManager
 import com.example.petsystem.R
-import com.example.petsystem.firebase.FirestoreClass
+import com.example.petsystem.firebase.FirestoreDatabase
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
         )
 
         Handler().postDelayed({
-            val currentUserID = FirestoreClass().getCurrentUserId()
+            val currentUserID = FirestoreDatabase().getCurrentUserId()
             if(currentUserID?.isNotEmpty() == true){
                 startActivity(Intent(this, MainActivity::class.java))
             }else{

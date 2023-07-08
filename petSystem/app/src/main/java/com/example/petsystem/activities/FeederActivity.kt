@@ -24,7 +24,7 @@ import androidx.appcompat.widget.Toolbar
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.example.petsystem.R
-import com.example.petsystem.firebase.FirestoreClass
+import com.example.petsystem.firebase.FirestoreDatabase
 import com.example.petsystem.models.Feeder
 import com.example.petsystem.utils.Constants
 import java.io.IOException
@@ -48,7 +48,7 @@ class FeederActivity : BaseActivity() {
 
         setUpActionBar()
 
-        FirestoreClass().loadMeals(this@FeederActivity)
+        FirestoreDatabase().loadMeals(this@FeederActivity)
 
         val quantityFirstMeal = findViewById<EditText>(R.id.edit_text_quantity_first_meal)
         quantityFirstMeal.inputType = InputType.TYPE_CLASS_NUMBER
@@ -65,8 +65,8 @@ class FeederActivity : BaseActivity() {
         timeSecondMeal.setOnClickListener { showTimePicker(timeSecondMeal) }
         timeThirdMeal.setOnClickListener { showTimePicker(timeThirdMeal) }
 
-        address = intent.getStringExtra(MainActivity.EXTRA_ADDRESS).toString()
-        name = intent.getStringExtra(MainActivity.EXTRA_NAME).toString()
+        address = intent.getStringExtra(Constants.EXTRA_ADDRESS).toString()
+        name = intent.getStringExtra(Constants.EXTRA_NAME).toString()
 
         Toast.makeText(this@FeederActivity, "$name: $address", Toast.LENGTH_LONG).show()
         ConnectToDevice(this@FeederActivity).execute()
@@ -77,8 +77,8 @@ class FeederActivity : BaseActivity() {
         val sendFirstMeal = findViewById<Button>(R.id.send_first_meal_btn)
         val sendSecondMeal = findViewById<Button>(R.id.send_second_meal_btn)
         val sendThirdMeal = findViewById<Button>(R.id.send_third_meal_btn)
-        open.setOnClickListener { sendCommand("OPEN") }
-        close.setOnClickListener { sendCommand("CLOSE") }
+        open.setOnClickListener { sendCommand("O") } //OPEN
+        close.setOnClickListener { sendCommand("C") } //CLOSE
         disconnect.setOnClickListener { disconnect() }
         sendFirstMeal.setOnClickListener {
             showProgressDialog(resources.getString(R.string.please_wait))
@@ -141,7 +141,7 @@ class FeederActivity : BaseActivity() {
             }
         }
 
-        FirestoreClass().updateMeals(this@FeederActivity, mealHashMAp)
+        FirestoreDatabase().updateMeals(this@FeederActivity, mealHashMAp)
     }
 
     fun mealUpdateSuccess(){

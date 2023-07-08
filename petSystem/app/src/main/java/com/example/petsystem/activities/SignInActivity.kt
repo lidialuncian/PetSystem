@@ -12,7 +12,7 @@ import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import com.example.petsystem.R
-import com.example.petsystem.firebase.FirestoreClass
+import com.example.petsystem.firebase.FirestoreDatabase
 import com.example.petsystem.models.User
 import com.google.android.material.textfield.TextInputLayout
 import com.google.firebase.auth.FirebaseAuth
@@ -57,7 +57,6 @@ class SignInActivity : BaseActivity() {
         val btnSignIn = findViewById<Button>(R.id.btn_sign_in)
         btnSignIn.setOnClickListener {
             signInUser()
-            startActivity(Intent(this@SignInActivity, MainActivity::class.java))
         }
     }
 
@@ -89,7 +88,8 @@ class SignInActivity : BaseActivity() {
                     if (task.isSuccessful) {
                         // Sign in success, update UI with the signed-in user's information
                         Log.d("Sign-in", "signInWithEmail:success")
-                        FirestoreClass().loadUserData(this@SignInActivity)
+                        FirestoreDatabase().loadUserData(this@SignInActivity)
+                        startActivity(Intent(this@SignInActivity, MainActivity::class.java))
                     } else {
                         // If sign in fails, display a message to the user.
                         Log.w("Sign-in", "signInWithEmail:failure", task.exception)

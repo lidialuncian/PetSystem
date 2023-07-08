@@ -37,8 +37,8 @@ class WaterBowlActivity : BaseActivity() {
         setContentView(R.layout.activity_water_bowl)
         setUpActionBar()
 
-        address = intent.getStringExtra(MainActivity.EXTRA_ADDRESS).toString()
-        name = intent.getStringExtra(MainActivity.EXTRA_NAME).toString()
+        address = intent.getStringExtra(Constants.EXTRA_ADDRESS).toString()
+        name = intent.getStringExtra(Constants.EXTRA_NAME).toString()
 
         Toast.makeText(this@WaterBowlActivity, "$name: $address", Toast.LENGTH_LONG).show()
         ConnectToDevice(this@WaterBowlActivity).execute()
@@ -46,8 +46,8 @@ class WaterBowlActivity : BaseActivity() {
         val start = findViewById<Button>(R.id.start_btn)
         val stop = findViewById<Button>(R.id.stop_btn)
         val disconnect = findViewById<Button>(R.id.disconnect_water_btn)
-        start.setOnClickListener { sendCommand("START") }
-        stop.setOnClickListener { sendCommand("STOP") }
+        start.setOnClickListener { sendCommand("O") }
+        stop.setOnClickListener { sendCommand("C") }
         disconnect.setOnClickListener { disconnect() }
     }
 

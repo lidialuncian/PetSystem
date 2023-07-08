@@ -26,7 +26,7 @@ import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
 import com.bumptech.glide.Glide
 import com.example.petsystem.R
-import com.example.petsystem.firebase.FirestoreClass
+import com.example.petsystem.firebase.FirestoreDatabase
 import com.example.petsystem.models.User
 import com.example.petsystem.utils.Constants
 import com.google.android.material.navigation.NavigationView
@@ -37,10 +37,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     private lateinit var bluetoothManager: BluetoothManager
     private var bluetoothAdapter: BluetoothAdapter? = null
     private lateinit var pairedDevices: Set<BluetoothDevice>
-    companion object {
-        const val EXTRA_ADDRESS: String = "Device_address"
-        const val EXTRA_NAME: String = "Device_name"
-    }
 
     @RequiresApi(Build.VERSION_CODES.S)
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -51,7 +47,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
 
         findViewById<NavigationView>(R.id.nav_view).setNavigationItemSelectedListener(this@MainActivity)
 
-        FirestoreClass().loadUserData(this@MainActivity)
+        FirestoreDatabase().loadUserData(this@MainActivity)
 
         bluetoothManager = getSystemService(android.bluetooth.BluetoothManager::class.java)
         bluetoothAdapter = bluetoothManager.adapter
@@ -95,8 +91,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     private fun connectToDevice(targetActivity: Class<*>) {
-        // Add your device connection logic here
-        // For example, you can show a progress dialog or perform Bluetooth device discovery
         pairedDevices = bluetoothAdapter!!.bondedDevices
         val deviceList: ArrayList<BluetoothDevice> = ArrayList()
         val deviceListNames: ArrayList<String> = ArrayList()
@@ -124,8 +118,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             if(targetActivity.toString().contains("FeederActivity")){
                 if(name == "HC-05-feeder"){
                     val intent = Intent(this@MainActivity, targetActivity)
-                    intent.putExtra(EXTRA_ADDRESS, address)
-                    intent.putExtra(EXTRA_NAME, name)
+                    intent.putExtra(Constants.EXTRA_ADDRESS, address)
+                    intent.putExtra(Constants.EXTRA_NAME, name)
                     startActivity(intent)
                     recreate()
                 }
@@ -137,8 +131,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             else if(targetActivity.toString().contains("WaterBowlActivity")){
                 if(name == "HC-05"){
                     val intent = Intent(this@MainActivity, targetActivity)
-                    intent.putExtra(EXTRA_ADDRESS, address)
-                    intent.putExtra(EXTRA_NAME, name)
+                    intent.putExtra(Constants.EXTRA_ADDRESS, address)
+                    intent.putExtra(Constants.EXTRA_NAME, name)
                     startActivity(intent)
                     recreate()
                 }
@@ -227,9 +221,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         startActivityForResult(enableBtIntent, Constants.REQUEST_ENABLE_BT)
     }
 
-
-
-
     private fun setupActionBar(){
         val toolbarMainActivity = findViewById<Toolbar>(R.id.toolbar_main_activity)
         setSupportActionBar(toolbarMainActivity)
@@ -292,7 +283,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if(resultCode == Activity.RESULT_OK && requestCode == Constants.MY_PROFILE_REQUEST_CODE){
-            FirestoreClass().loadUserData(this@MainActivity)
+            FirestoreDatabase().loadUserData(this@MainActivity)
         }else if(resultCode == Activity.RESULT_OK && requestCode == Constants.REQUEST_ENABLE_BT){
             if (bluetoothAdapter!!.isEnabled) {
                 Toast.makeText(this@MainActivity, "Bluetooth has been enabled", Toast.LENGTH_LONG).show()
@@ -303,5 +294,4 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             Log.e("Cancelled", "Cancelled")
         }
     }
-
 }
